@@ -158,7 +158,7 @@ public class Rest extends base{
                 .delete("environments/{id}")
                 .then().log().body();
 
-        System.out.println("new changes");
+
 
 
     }
