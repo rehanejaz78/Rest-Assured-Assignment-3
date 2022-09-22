@@ -10,5 +10,6 @@ public class base {
 
         baseURI = "https://api.getpostman.com";
         basePath = "/environments";
+        System.out.println("new changes in base");
     }
 }
