@@ -1,3 +1,5 @@
+package Assignment3;
+
 import org.testng.annotations.BeforeClass;
 
 import static io.restassured.RestAssured.*;
