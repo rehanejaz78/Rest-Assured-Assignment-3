@@ -27,9 +27,39 @@ public class Tests {
         System.out.println(obj.getData().getEmail());
 
         System.out.println(obj.getData().getId());
-
-
         System.out.println("I am new test : " +resp.statusCode());
+    }
+
+
+    @Test
+    public void CreateTest(){
+        //update API test
+
+        UpdateJson body = new UpdateJson();
+
+        body.setName("Rehan Ejaz");
+        body.setJob("Automation Engineer");
+        body.setId("1232");
+
+
+
+        Response response = given()
+                .header("Content-Type","application/json")
+                .when().body(body)  .post("https://reqres.in/api/users")
+                .then().extract().response();
+        System.out.println("Statu code " +response.statusCode());
+
+        UpdateJson obj  = response.body().as(UpdateJson.class);
+        System.out.println(obj.getId());
+        System.out.println(obj.getName());
+        System.out.println(obj.getJob());
+
+
+
+
+
+
+
     }
 
 
