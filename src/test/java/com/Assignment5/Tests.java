@@ -1,8 +1,8 @@
 package com.Assignment5;
 
-import Assignment3.Rest;
-import io.restassured.RestAssured;
+import io.qameta.allure.Allure;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -54,6 +54,15 @@ public class Tests {
         System.out.println(obj.getName());
         System.out.println(obj.getJob());
 
+        int statusCode = response.getStatusCode();
+        String ContentType = response.getContentType();
+
+        Allure.step("Status code : " + statusCode);
+        Allure.step("Conntent type: " + ContentType);
+
+        Assert.assertEquals(statusCode, 201);
+        Assert.assertEquals(ContentType, "application/json; charset=utf-8");
+        System.out.println("end");
 
 
 
