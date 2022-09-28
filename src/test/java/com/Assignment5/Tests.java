@@ -62,6 +62,7 @@ public class Tests {
 
         Assert.assertEquals(statusCode, 201);
         Assert.assertEquals(ContentType, "application/json; charset=utf-8");
+        System.out.println("end");
 
 
 
