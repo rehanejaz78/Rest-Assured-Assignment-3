@@ -140,7 +140,7 @@ public class Rest extends base{
                         "}")
                 .put("https://api.getpostman.com/environments/{id}")
                 .then().log().body();
-        System.out.println("hello");
+        System.out.println("hellooooo");
 
 
 
